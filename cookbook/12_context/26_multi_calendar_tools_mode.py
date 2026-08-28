@@ -5,8 +5,8 @@ Multiple Calendars — Tools Mode
 Two Google Calendar providers with mode=ContextMode.tools: one for work,
 one for personal. Each provider prefixes its tools with its id:
 
-- ``work_get_events``, ``work_search_events``, ``work_list_calendars``
-- ``personal_get_events``, ``personal_search_events``, ``personal_list_calendars``
+- ``work_list_events``, ``work_get_event``, ``work_search_events``, ``work_list_calendars``
+- ``personal_list_events``, ``personal_get_event``, ``personal_search_events``, ``personal_list_calendars``
 
 The agent can query both calendars simultaneously without tool name collisions.
 Use case: "Am I free Thursday?" checks both work and personal calendars.
@@ -29,7 +29,9 @@ try:
     from agno.context.calendar import GoogleCalendarContextProvider
 except ImportError:
     print("Google client libraries not found. Install with:")
-    print("  pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib")
+    print(
+        "  pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib"
+    )
     raise SystemExit(1)
 
 from agno.agent import Agent
