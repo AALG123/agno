@@ -187,7 +187,7 @@ class GmailContextProvider(ContextProvider):
             # Tool names are prefixed with provider id when mode=tools
             prefix = f"{self.id}_"
             return (
-                f"`{self.name}`: read-only Gmail tools. Use `{prefix}search_emails`, `{prefix}get_email`, "
+                f"`{self.name}`: read-only Gmail tools. Use `{prefix}search_emails`, `{prefix}get_message`, "
                 f"`{prefix}list_labels` to explore the inbox."
             )
         tools = [self.query_tool_name]

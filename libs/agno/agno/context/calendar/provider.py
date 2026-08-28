@@ -172,8 +172,8 @@ class GoogleCalendarContextProvider(ContextProvider):
             # Tool names are prefixed with provider id when mode=tools
             prefix = f"{self.id}_"
             return (
-                f"`{self.name}`: read-only Calendar tools. Use `{prefix}list_calendars`, `{prefix}get_events`, "
-                f"`{prefix}search_events` to explore calendars."
+                f"`{self.name}`: read-only Calendar tools. Use `{prefix}list_calendars`, `{prefix}list_events`, "
+                f"`{prefix}get_event`, `{prefix}search_events` to explore calendars."
             )
         tools = [self.query_tool_name]
         if self.write:
